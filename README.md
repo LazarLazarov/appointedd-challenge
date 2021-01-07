@@ -7,6 +7,6 @@
 
 # Usage
 
-`node apponitedd.js`
+`node appointedd.js`
 
 The script processes a file named `input.txt` in the same folder as the script
