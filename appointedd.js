@@ -21,7 +21,7 @@ fs.readFile( __dirname + '/input.txt', function (err, data) {
 	earliestStart = new Date(271821, 3, 20)
 	latestEnd = new Date(-271821, 3, 20)
 	intervalMap = new Map()
-	// Transform into more easily processable form
+	// Transform into more easily processable form that's indexed by interval timestamps
 	workerArray.forEach((worker, index) => {
 		worker.freeIntervals.forEach(interval => {
 			if (interval.start < earliestStart) earliestStart = interval.start
@@ -75,6 +75,7 @@ fs.readFile( __dirname + '/input.txt', function (err, data) {
 	console.log(earliestStart.toISOString())
 	console.log("Q2 Answer:")
 	console.log(latestEnd.toISOString())
+	// Do note that using inputSmall.txt, the script produces more results that the provided test case outputs,
 	console.log("Q3 Answer:")
 	overlappingIntervals.forEach((workers, interval) => {
 		if (workers.length >= 2) console.log(interval + " @ " + workers.toString())
