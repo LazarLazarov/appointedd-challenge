@@ -76,6 +76,7 @@ fs.readFile( __dirname + '/input.txt', function (err, data) {
 	console.log("Q2 Answer:")
 	console.log(latestEnd.toISOString())
 	// Do note that using inputSmall.txt, the script produces more results that the provided test case outputs,
+	// but still seems consistant with the question's requirements
 	console.log("Q3 Answer:")
 	overlappingIntervals.forEach((workers, interval) => {
 		if (workers.length >= 2) console.log(interval + " @ " + workers.toString())
