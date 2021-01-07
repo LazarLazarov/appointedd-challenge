@@ -2,6 +2,7 @@
 
 # Dependencies
 `node >= 15.0.0`
+
 `npm install lodash`
 
 # Usage
